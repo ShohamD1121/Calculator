@@ -76,8 +76,7 @@ class Calculator {
 
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return;
-        this.currentOperand = this.currentOperand.toString() + number.toString();
-
+        this.currentOperand += number.toString();
     }
 
     chooseOperation(operation) {
@@ -119,21 +118,21 @@ class Calculator {
     updateDisplay() {
         this.currentOperandText.innerText = this.currentOperand;
 
-        if (this.operation !== null) {
-            this.previousOperandText.innerText = `${this.previousOperand} ${this.operation}`;
+        if (this.operation !== '') {
+            this.previousOperandText.innerText = this.previousOperand.toString() + this.operation.toString(); // Another cool way of writitng it : `${this.previousOperand} ${this.operation}`;
         } else {
             this.previousOperandText.innerText = '';
         }
     }
 }
 
-const numberButtons = document.querySelectorAll('[data-number');
-const operationButtons = document.querySelectorAll('[data-operation');
-const equalsButton = document.querySelector('[data-equals]');
-const deleteButton = document.querySelector('[data-delete]');
-const resetButton = document.querySelector('[data-reset]');
-const previousOperandText = document.querySelector('[data-previous-operand]');
-const currentOperandText = document.querySelector('[data-current-operand]');
+const numberButtons = document.querySelectorAll('[data-number]'); //num 0-9
+const operationButtons = document.querySelectorAll('[data-operation]'); // oper + - X /
+const equalsButton = document.querySelector('[data-equals]'); // =
+const deleteButton = document.querySelector('[data-delete]'); // DEL
+const resetButton = document.querySelector('[data-reset]'); // RESET
+const previousOperandText = document.querySelector('[data-previous-operand]'); // 
+const currentOperandText = document.querySelector('[data-current-operand]'); // 
 
 const calculator = new Calculator(previousOperandText, currentOperandText);
 

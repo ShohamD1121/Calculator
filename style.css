@@ -161,3 +161,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
+@media only screen and (max-width : 425px){
+    .container{
+        max-width : 250px;
+    }
+    .title .nav p:nth-child(2){
+        margin-left : 100px;
+    }
+}
