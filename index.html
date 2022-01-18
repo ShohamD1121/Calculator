@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="title">
+            <div class="nav">
+                <p class="pnav">calc</p>
+                <p class="pnav">THEME</p>
+                <div class="switch">
+                    <p class="p theme-dot ">.</p>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <p data-previous-operand class="previous-operand"></p>
+            <p data-current-operand class="current-operand"></p>
+        </div>
+        <div class="calc-body">
+            <div class="sm-btn">
+                <div data-number class="num-op"><p>7</p></div>
+                <div data-number class="num-op"><p>8</p></div>
+                <div data-number class="num-op"><p>9</p></div>
+                <div data-delete class="word"><p>DEL</p></div>
+                <div data-number class="num-op"><p>4</p></div>
+                <div data-number class="num-op"><p>5</p></div>
+                <div data-number class="num-op"><p>6</p></div>
+                <div data-operation class="num-op"><p>+</p></div>
+                <div data-number class="num-op"><p>1</p></div>
+                <div data-number class="num-op"><p>2</p></div>
+                <div data-number class="num-op"><p>3</p></div>
+                <div data-operation class="num-op"><p>-</p></div>
+                <div data-number class="num-op dot"><p>.</p></div>
+                <div data-number class="num-op"><p>0</p></div>
+                <div data-operation class="num-op"><p>/</p></div>
+                <div data-operation class="num-op"><p>X</p></div>
+            </div>
+            <div class="lg-btn">
+                <div data-reset class="word"><p>RESET</p></div>
+                <div data-equals class="equal"><p>=</p></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

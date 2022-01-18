@@ -1,0 +1,163 @@
+:root {
+    /* Theme 1 Colors */
+    --main-background-bgcolor: hsl(222, 26%, 31%);
+    --toggle-keypad-bgcolor: hsl(223, 31%, 20%);
+    --screen-bgcolor: hsl(224, 36%, 15%);
+    --key-bgcolor: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --red: hsl(6, 63%, 50%);
+    --red-shadow: hsl(6, 70%, 34%);
+    --gray-key-bgcolor: hsl(30, 25%, 89%);
+    --grayish-key-shadow: hsl(28, 16%, 65%);
+    --key-text: hsl(221, 14%, 31%);
+    --white: hsl(0, 0, 100%);
+}
+
+*{
+    margin : 0;
+    padding : 0;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    background-color: var(--main-background-bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+    background-color: var(--main-background-bgcolor);
+    margin-bottom : 150px;
+}
+
+.title {
+    background-color: var(--main-background-bgcolor);
+    height: 50px;
+    width: 100%;
+}
+
+.title .nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title .nav p:nth-child(2){
+    margin-left : 200px;
+    margin-top : 7px;
+    font-size : 8px;
+}
+
+.title .nav .switch{
+    background-color: var(--toggle-keypad-bgcolor);
+    height : 20px;
+    width : 60px;
+    border-radius : 20%;
+    text-align : center;
+}
+
+.title .nav .switch .p{
+    color : hsl(6, 63%, 50%);
+    font-size : 3.5rem;
+    margin-top : -2.2rem;
+    margin-right : 2.2rem;
+    transition : 0.5s linear;
+}
+
+.switch-loc {
+    color: hsl(6, 63%, 50%);
+    font-size: 3.5rem;
+    margin-top: -2.2rem;
+    transition: 0.5s linear;
+    margin-right: 0rem;
+}
+
+.switch-loc-color {
+    margin-right: -2.2rem;
+    color: hsl(176, 100%, 44%);
+    font-size: 3.5rem;
+    margin-top: -2.2rem;
+    transition: 0.5s linear;
+}
+
+.result {
+    height: 100px;
+    width: 100%;
+    background-color: var(--screen-bgcolor);
+    margin-bottom: 20px;
+    border-radius : 10px;
+    text-align : right;
+    color : white;
+}
+
+.result .previous-operand{
+    padding : 10px 40px;
+    font-size : 25px;
+}
+
+.result .current-operand{
+    font-size : 25px;
+    padding : 10px 40px;
+}
+
+.calc-body {
+    height: 350px;
+    width: 100%;
+    background-color: var(--toggle-keypad-bgcolor);
+    border-radius: 10px;
+}
+
+.calc-body .sm-btn{
+    display: grid;
+    gap : 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    height : 250px;
+    padding : 20px;
+}
+
+.calc-body .sm-btn .num-op{
+    background-color : var(--gray-key-bgcolor);
+    border-radius : 10px;
+    text-align : center;
+    color :hsl(221, 14%, 31%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.calc-body .lg-btn{
+    display: grid;
+    gap : 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    height : 50px;
+    padding : 0 20px;
+}
+
+.calc-body .word{
+    background-color : var(--key-bgcolor);
+    border-radius : 10px;
+    text-align : center;
+    color : white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-body .lg-btn .equal{
+    background-color : var(--red);
+    border-radius : 10px;
+    text-align : center;
+    color : white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
