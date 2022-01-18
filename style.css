@@ -165,9 +165,15 @@ body {
 
 @media only screen and (max-width : 425px){
     .container{
-        max-width : 250px;
+        max-width : 275px;
     }
     .title .nav p:nth-child(2){
         margin-left : 100px;
+    }
+    .result .current-operand{
+        font-size : 15px;
+    }
+    .result .previous-operand{
+        font-size : 10px;
     }
 }
